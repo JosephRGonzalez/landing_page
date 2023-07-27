@@ -1,5 +1,6 @@
 html{
 min-height: 100%;
+background-color: black;
 }
 
 body{
@@ -26,6 +27,7 @@ body{
 
 .menuBar{
     display:flex;
+background-color: rgba(0,0,0,.5);
     flex-direction: row;
     height:50px;
     border: 2px solid black;
@@ -33,13 +35,29 @@ body{
     align-content: center;
     padding: 0%;
     margin:0%;
-    
+    position: fixed;
+    width:100%;
+    overflow:hidden;
+    z-index: 1;
 
 }
 
+.menuLogo{
+    color: #e5e7eb;
+    font-family: "Roboto", "Ubuntu", sans-serif;
+    line-height: 60px;
+    font-size: 48px;
+    text-align: left;
+    font-weight: bolder;
+    width : 500px;
+    padding-left: 100px;
+    
+    background-color: rgba(0,0,0,.5);
+
+}
 .menuOption{
     display:flex;
-    border:2px solid white;
+    
     border-top-color: black;
     flex: 1;
     flex-direction: row nowrap;
@@ -49,11 +67,18 @@ body{
     padding: 0%;
     margin:0%;
     line-height: 50px;
-    background-color: black;
+    background-color: rgba(0,0,0,.5);
     font-family: "Roboto", "Ubuntu", sans-serif;
     font-size: 22px;
     font-weight: bolder;
+    
 
+}
+
+.menuOption :hover{
+    transform: scale(1.09);
+    transition: 0.75s;
+    color:rgb(151, 17, 17);
 }
 
 .logoContainer{
@@ -72,7 +97,7 @@ vertical-align: middle;
 .logo{
     display:flex;
     flex-direction: column nowrap;
-    border: 2px solid white;
+    border: 2.5px solid rgb(151, 17, 17);
     font-size: 144px;
     font-weight: bolder;
     font-family: "Roboto", "Ubuntu", sans-serif;
@@ -86,7 +111,7 @@ vertical-align: middle;
     background-color:black;
     margin: 5%;
     margin-bottom: 0;
-    
+
 }
 
 
@@ -106,21 +131,48 @@ vertical-align: middle;
 
 
 .about{
-    min-height:550px;
-    background-color: rgb(84, 83, 83);
+    min-height:700px;
+    background-image: linear-gradient(rgb(38, 37, 37), black);
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.aboutTop{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color:#F9FAF8;
+    font-family: "Roboto", "Ubuntu", sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 42px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    border:2px solid transparent;
+    background-color: rgba(0,0,0,.5);
+    height:60px;
+    padding-top: 20px;
+    
+}
+
+.aboutPump{
+    font-weight:bold;
+    font-style: normal;
+
+}
+.imageContainer{
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    vertical-align: middle;
-
-    
+    vertical-align: center;
 }
-
 .workouts,.features,.community{
-    
+
     display: flex;
-    
+    justify-content: space-between;
     
 }
 
@@ -128,15 +180,66 @@ vertical-align: middle;
     margin-left: 5%;
 }
 
-.community{
+.community,.aboutCommunity{
     margin-right: 5%;
 }
 .workoutsImage, .featuresImage, .communityImage{
     height:300px;
     width:400px;
-    border: 2px solid white;
+    border: 2px solid black;
     border-radius: 10px;
 }
+
+.aboutContainer{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: center;
+}
+.aboutWorkouts, .aboutFeatures, .aboutCommunity{
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+    border:2px solid rgb(255, 255, 255, 0.5);
+    color:#e5e7eb;
+    font-family: "Roboto", "Ubuntu", sans-serif;
+    font-weight: lighter;
+    font-style: italic;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 24px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+.aboutCommunity{
+    padding-bottom: 1%;
+    height:160px;
+    width:400px
+}
+.aboutFeatures{
+    height:175px;
+    width:415px;
+    padding-bottom: 1%;
+    
+}
+
+.aboutWorkouts{
+    margin-left: 4.6%;
+    height:160px;
+    width:415px;
+    padding-bottom: 1%;
+}
+
+.aboutSpan{
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+
 .secondImage{
     background-image: url(../landing_page/images/gymBackground.jpg);
     background-attachment: fixed;
@@ -144,9 +247,220 @@ vertical-align: middle;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.quote{
+    width:950px;
+    height:200px;
+    color:white;
+    font-size: 48px;
+    font-weight: light;
+    font-style: italic;
+    text-align: justify;
+    padding-top: 50px;
+    padding-bottom: 0px;
+
+}
+
+.quoteAuthor{
+    width:950px;
+    height:50px;
+    text-align: right;
+    color:rgb(255, 255, 255);
+    font-size: 36px;
+    font-weight: bolder;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+.quoteContainer{
+    width:1000px;
+    height:300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    border:2px solid rgb(32, 31, 31);
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.5);
+
 }
 
 .bottom{
     min-height:300px;
-    background-color: darkgrey;
+    background-image: linear-gradient(black, rgb(10, 9, 9), rgb(28, 15, 15), rgb(166, 166, 166));
+
+}
+
+.bottomReady{
+    height:120px;
+    width:1000px;
+color:#F9FAF8;
+font-size: 24px;
+font-weight: bolder;
+font-family: "Roboto", "Ubuntu", sans-serif;
+font-style: italic;
+padding-top: 10px;
+text-align: left;
+line-height: 70px;
+padding-bottom: 0;
+padding-left: 40px;
+
+}
+
+.bottomContainer{
+    height:300px;
+    display: flex;
+    flex-direction:row;
+    overflow: hidden;
+    
+
+}
+.bottomCall{
+    color:#F9FAF8;
+    font-family: "Roboto", "Ubuntu", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    width:1100px;
+    height:200px;
+    padding-left: 0px;
+    vertical-align: middle;
+    padding-top: 0px;
+    margin-top: -60px;
+
+
+}
+
+.bottomSignup{
+    border:2px solid rgb(23, 23, 23);
+    color:#000000;
+    font-family: "Roboto", "Ubuntu", sans-serif;
+    font-size: 28px;
+    width:300px;
+    text-align: center;
+    font-weight: normal;
+    vertical-align: middle;
+    height:20px;
+    padding-bottom: 40px;
+    line-height: 55px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    
+}
+
+.bottomSignup:hover{
+    transform: scale(1.09);
+    transition: 0.75s;
+}
+
+.callContainer{
+    
+    height:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+align-items: center;
+
+    
+}
+
+.signupContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottomBackgroundContainer{
+    display: flex;
+    flex-direction: row;
+    width:1500px;
+    margin-left: 90px;
+    margin-right: 0px;
+    height:150px;
+    margin-top: 70px;
+    border:2px rgb(38, 38, 38) solid;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,.5);
+}
+
+.footer{
+    min-height: 120px;
+ background-color: rgb(65, 65, 65);
+}
+
+.footerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.github{
+    margin-top: 15px;
+
+}
+
+.linkedIn{
+    margin-top: 18px;
+    margin-right:40px;
+    
+    
+}
+.githubImage{
+    width:75px;
+    height:60px
+}
+
+.linkedInImage{
+    width:60px;
+    height:60px;
+}
+
+.footerLogo{
+    color: #e5e7eb;
+    font-family: "Roboto", "Ubuntu", sans-serif;
+    font-size: 48px;
+    font-weight: bolder;
+    margin-top: 35px;
+    margin-left: 70px;    
+}
+
+.copyright{
+    margin-top: 55px;
+    margin-left: 290px;
+    color:#F9FAF8;
+
+}
+
+.footerConnect{
+    margin-top: 35px;
+    font-family: "Roboto", "Ubuntu", sans-serif;
+    font-size: 24px;
+    margin-left: 20px;
+    padding-bottom: 10px;
+    font-weight: normal;
+    color: #F9FAF8;
+}
+
+.connectContainer{
+    display: flex;
+    flex-direction: row;
+    border: black solid 2px;
+    margin-right: 40px;
+    width:500px;
+    height:100px;
+    justify-content: space-between;
+    margin-top: 10px;
+    vertical-align: middle;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,.5);
+}
+
+.linkedIn:hover, .github :hover{
+    transform: scale(1.09);
+    transition: 0.75s;
 }
