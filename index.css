@@ -79,6 +79,7 @@ background-color: rgba(0,0,0,.5);
     transform: scale(1.09);
     transition: 0.75s;
     color:rgb(151, 17, 17);
+    cursor:pointer;
 }
 
 .logoContainer{
